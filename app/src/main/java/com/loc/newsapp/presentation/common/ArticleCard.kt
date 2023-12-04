@@ -45,7 +45,7 @@ fun ArticleCard(
 ){
     val context = LocalContext.current
     Row(
-        modifier = modifier.clickable { onCLick }
+        modifier = modifier.clickable { onCLick() }
     ) {
         // we using coil to load image
         AsyncImage(modifier = Modifier
@@ -84,7 +84,7 @@ fun ArticleCard(
                     text = article.publishedAt,
                     style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.Bold),
                     color = colorResource(id = R.color.body),
-                    fontSize = 10.sp
+                    fontSize = 9.sp
                 )
             }
         }
